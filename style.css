@@ -533,3 +533,244 @@ footer {
     flex-direction: column;
   }
 }
+/* Pricing Section */
+.pricing-section {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+}
+
+.pricing-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.pricing-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  flex: 1 1 250px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.pricing-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.pricing-card p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.pricing-card .price {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Breeds Section */
+.breeds-section {
+  padding: 4rem 0;
+  background-color: #fefefe;
+}
+
+.breeds-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+.breed-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  overflow: hidden;
+  flex: 1 1 280px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.breed-card:hover {
+  transform: translateY(-8px);
+}
+
+.breed-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.breed-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-family: 'Playfair Display', serif;
+  color: #444;
+  font-size: 1.6rem;
+}
+
+.breed-card p {
+  padding: 0 1rem 1.5rem;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .breeds-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .breed-card {
+    width: 90%;
+  }
+}
+/* Videos Section */
+.videos-section {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+}
+
+.videos-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.video-wrapper {
+  flex: 1 1 320px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 1rem;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 180px;
+  border: none;
+  display: block;
+}
+
+.video-wrapper h3 {
+  margin-top: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: #444;
+  font-size: 1.4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .videos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-wrapper {
+    width: 90%;
+  }
+}
+/* Video background */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6); /* darken for text readability */
+}
+
+/* Overlay to place all your content above the video */
+.content-overlay {
+  position: relative;
+  z-index: 10;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Example styling for homepage content */
+.homepage-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.homepage-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.homepage-content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.btn-primary {
+  background-color: #8c6239;
+  color: white;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.btn-primary:hover {
+  background-color: #6b4828;
+}
+
+/* Adjust navbar colors for visibility on video */
+.navbar {
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: none;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 20;
+}
+
+.navbar .logo,
+.navbar a {
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}

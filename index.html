@@ -9,24 +9,45 @@
 </head>
 <body>
   <!-- Navigation -->
-  <header class="navbar">
-  <div class="container">
-    <h1 class="logo">Silver Hoof Stable</h1>
-    <div class="menu-toggle" id="mobile-menu">
-      &#9776;
-    </div>
-    <nav>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="horses.html">Our Horses</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="book.html">Book</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Video Background -->
+  <video autoplay muted loop id="bg-video" playsinline>
+    <source src="videos/background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay content -->
+  <div class="content-overlay">
+    <!-- Your existing navbar and homepage content here -->
+
+    <header class="navbar">
+      <div class="container">
+        <h1 class="logo">Silver Hoof Stable</h1>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        <nav>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="horses.html">Our Horses</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="breeds.html">Breeds</a></li>
+            <li><a href="video.html">Videos</a></li>
+            <li><a href="book.html">Book</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="homepage-content">
+      <div class="container">
+        <h2>Welcome to Silver Hoof Stable</h2>
+        <p>Your trusted place for horse care, training, and riding.</p>
+        <a href="book.html" class="btn-primary">Book a Visit</a>
+      </div>
+    </main>
   </div>
-</header>
+
 
   <!-- Hero Section -->
   <section class="hero">

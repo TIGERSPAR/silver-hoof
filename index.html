@@ -5,20 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Silver Hoof Stable</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation -->
-  <!-- Video Background -->
+  <!-- Background Video -->
   <video autoplay muted loop id="bg-video" playsinline>
-    <source src="videos/background.mp4" type="video/mp4" />
+    <source src="v4.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  <!-- Overlay content -->
-  <div class="content-overlay">
-    <!-- Your existing navbar and homepage content here -->
+  <!-- Glassy Overlay -->
+  <div class="content-overlay glass">
 
+    <!-- Navigation -->
     <header class="navbar">
       <div class="container">
         <h1 class="logo">Silver Hoof Stable</h1>
@@ -34,41 +33,42 @@
             <li><a href="video.html">Videos</a></li>
             <li><a href="book.html">Book</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li>
+              <button id="toggle-theme" class="toggle-theme" title="Toggle dark mode">🌙</button>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
+    <!-- Welcome Section -->
     <main class="homepage-content">
-      <div class="container">
-        <h2>Welcome to Silver Hoof Stable</h2>
-        <p>Your trusted place for horse care, training, and riding.</p>
+      <div class="container center-text">
+        <h2 class="main-title">Welcome to Silver Hoof Stable</h2>
+        <p class="subtitle">Elegant horses. Expert care. Timeless tradition.</p>
         <a href="book.html" class="btn-primary">Book a Visit</a>
       </div>
     </main>
   </div>
 
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Welcome to Silver Hoof Stable</h2>
-      <p>Where tradition meets elegance. Ride with passion.</p>
+  <!-- Sections -->
+  <section class="highlight-section light-bg">
+    <div class="container">
+      <h2>Ride with Passion</h2>
+      <p>Where tradition meets elegance. Join us on the journey.</p>
       <a href="horses.html" class="btn">Explore Our Horses</a>
     </div>
   </section>
 
-  <!-- About Teaser -->
   <section class="about-teaser">
     <div class="container">
       <h2>Our Story</h2>
-      <p>Silver Hoof Stable is a sanctuary for horses and riders alike. We are passionate about building a community through equine care, riding education, and unforgettable experiences.</p>
+      <p>Silver Hoof Stable is a sanctuary for horses and riders alike. We’re building a legacy of excellence in riding, training, and equine companionship.</p>
       <a href="about.html" class="btn">Learn More</a>
     </div>
   </section>
 
-  <!-- Services Teaser -->
-  <section class="services-teaser">
+  <section class="services-teaser light-bg">
     <div class="container">
       <h2>Our Services</h2>
       <ul class="service-list">
@@ -80,13 +80,75 @@
       <a href="services.html" class="btn">View All Services</a>
     </div>
   </section>
-<script src="scriptmenu.js"></script>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Silver Hoof Stable. All rights reserved.</p>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>About Us</h3>
+      <p>Silver Hoof Stable - Excellence in horse care and training.</p>
     </div>
-  </footer>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="breed.html">Breeds</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>Email: </p>
+      <p>Phone: +44794394650 </p>
+      <p>Address: </p>
+    </div>
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Silver Hoof Stable. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <script>
+
+    const toggleBtn = document.getElementById('toggle-theme');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        toggleBtn.textContent = '☀️';
+      } else {
+        localStorage.setItem('theme', 'light');
+        toggleBtn.textContent = '🌙';
+      }
+    });
+
+
+  // Hamburger menu toggle
+  const menuToggle = document.getElementById('mobile-menu');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  </script>
 </body>
 </html>

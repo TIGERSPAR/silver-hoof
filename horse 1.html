@@ -3,11 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Horses - Silver Hoof Stable</title>
+  <title>Shadow Dancer - Silver Hoof Stable</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    .horse-detail {
+      padding: 3rem 1rem;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .horse-detail .container {
+      max-width: 600px;
+    }
+
+    .horse-detail h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .horse-detail p {
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+      color: #555;
+    }
+
+    /* Optional Image */
+    .horse-detail img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Active Link Styling */
+    .nav-links a.active {
+      color: #ffd700;
+      font-weight: bold;
+    }
+
+    /* Footer spacing */
+    footer {
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
+
   <!-- Navigation -->
   <header class="navbar">
     <div class="container">
@@ -29,40 +76,15 @@
     </div>
   </header>
 
-  <!-- Page Header -->
-  <section class="page-header">
+  <!-- Horse Detail Section -->
+  <section class="horse-detail">
     <div class="container">
-      <h2>Meet Our Horses</h2>
-      <p>Elegant. Strong. Beloved. Each horse has its own story.</p>
-    </div>
-  </section>
-
-  <!-- Horse Profiles -->
-  <section class="horse-profiles">
-    <div class="container">
-      <div class="horse-grid">
-        
-        <div class="horse-card">
-          <img src="b1.jpg" alt="Shadow Dancer the horse">
-          <h3>Shadow Dancer</h3>
-          <a href="horse 1.html" class="horse-button">Horse Details</a>
-        </div>
-
-        <div class="horse-card">
-          <img src="b7.jpg" alt="Rusty the horse">
-          <h3>Rusty</h3>
-          <a href="horse 2.html" class="horse-button">Horse Details</a>
-        </div>
-
-        <div class="horse-card">
-          <img src="b5.jpg" alt="Luna the horse">
-          <h3>Luna</h3>
-          <a href="horse 3.html" class="horse-button">Horse Details</a>
-        </div>
-
-        <!-- Add more horse cards here -->
-
-      </div>
+      <!-- Optional: Replace with actual image of the horse -->
+      <img src="b1.jpg" alt="Shadow Dancer the horse">
+      <h2>Shadow Dancer</h2>
+      <p><strong>Breed:</strong> Friesian</p>
+      <p><strong>Discipline:</strong> Dressage</p>
+      <p>A graceful and powerful Friesian known for her smooth gaits and strong presence in the arena.</p>
     </div>
   </section>
 
@@ -73,15 +95,14 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Mobile Menu Toggle Script -->
   <script>
-    // Hamburger menu toggle
     const toggle = document.getElementById('mobile-menu');
     const nav = document.getElementById('nav-links');
-
     toggle.addEventListener('click', () => {
       nav.classList.toggle('show');
     });
   </script>
+
 </body>
 </html>

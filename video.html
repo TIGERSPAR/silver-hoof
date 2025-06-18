@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet" />
 </head>
 <body>
+
   <!-- Navigation -->
   <header class="navbar">
     <div class="container">
@@ -40,38 +41,34 @@
   <!-- Videos Section -->
   <section class="videos-section">
     <div class="container videos-container">
+
+      <!-- Thumbnails for Lightbox -->
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          title="Stable Tour"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <img src="v1.mp4" alt="Morning Ride" class="video-thumb" data-video="v1.mp4">
+        <h3>Morning Ride</h3>
+      </div>
+
+      <div class="video-wrapper">
+        <img src="v2.mp4" alt="Stable Tour" class="video-thumb" data-video="v1 (2).mp4">
         <h3>Stable Tour</h3>
       </div>
 
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/3JZ_D3ELwOQ"
-          title="Riding Lessons"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <img src="v3.mp4" alt="Riding Lessons" class="video-thumb" data-video="v2.mp4">
         <h3>Riding Lessons</h3>
       </div>
 
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/V-_O7nl0Ii0"
-          title="Trail Ride Adventure"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <img src="v4.mp4" alt="Trail Ride" class="video-thumb" data-video="v3.mp4">
         <h3>Trail Ride Adventure</h3>
       </div>
+
+      <div class="video-wrapper">
+        <img src="" alt="Evening Gallop" class="video-thumb" data-video="v4.mp4">
+        <h3>Evening Gallop</h3>
+      </div>
+
+     
     </div>
   </section>
 
@@ -82,6 +79,50 @@
     </div>
   </footer>
 
-  <script src="scripts/menu.js"></script>
+  <!-- Lightbox Video Modal -->
+  <div id="video-lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close">&times;</span>
+      <video id="lightbox-video" controls autoplay></video>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Hamburger menu toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // Lightbox logic
+    const thumbs = document.querySelectorAll('.video-thumb');
+    const lightbox = document.getElementById('video-lightbox');
+    const lightboxVideo = document.getElementById('lightbox-video');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const videoSrc = thumb.getAttribute('data-video');
+        lightboxVideo.src = videoSrc;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxVideo.pause();
+      lightboxVideo.src = "";
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        lightboxVideo.pause();
+        lightboxVideo.src = "";
+      }
+    });
+  </script>
 </body>
 </html>

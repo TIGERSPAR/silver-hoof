@@ -3,40 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Horses - silver hoof Stable</title>
+  <title>Shadow Dancer - Silver Hoof Stable</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    .horse-detail {
+      padding: 3rem 1rem;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .horse-detail .container {
+      max-width: 600px;
+    }
+
+    .horse-detail h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .horse-detail p {
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+      color: #555;
+    }
+
+    /* Optional Image */
+    .horse-detail img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Active Link Styling */
+    .nav-links a.active {
+      color: #ffd700;
+      font-weight: bold;
+    }
+
+    /* Footer spacing */
+    footer {
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
+
   <!-- Navigation -->
   <header class="navbar">
-  <div class="container">
-    <h1 class="logo">silver hoof Stable</h1>
-    <div class="menu-toggle" id="mobile-menu">
-      &#9776;
-    </div>
-    <nav>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="horse.html">Our Horses</a></li>
-        <li><a href="services.html">Services</a></li>
-         <li><a href="pricing.html">pricing</a></li>
-         <li><a href="breeds.html">Breeds</a></li>
-         <li><a href="video.html">Videos</a></li>
-        <li><a href="book.html">Book</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-  </header>
-  <section>
-    <p></p>
-  </section>
-   <footer>
     <div class="container">
-      <p>&copy; 2025 silver hoof Stable. All rights reserved.</p>
+      <h1 class="logo">Silver Hoof Stable</h1>
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="horses.html" class="active">Our Horses</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="breeds.html">Breeds</a></li>
+          <li><a href="video.html">Videos</a></li>
+          <li><a href="book.html">Book</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+              <button id="toggle-theme" class="toggle-theme" title="Toggle dark mode">🌙</button>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Horse Detail Section -->
+  <section class="horse-detail">
+    <div class="container">
+      <!-- Optional: Replace with actual image of the horse -->
+       <img src="n05(2).jpg" alt="Luna the horse">
+      <img src="n05(3).jpg" alt="Luna the horse">
+      <img src="n05(4).jpg" alt="Luna the horse">
+      <img src="n05(5).jpg" alt="luna the horse">
+      <img src="n05(6).jpg" alt="luna the horse">
+      <h2>gabs</h2>
+      <p><strong>Age:</strong>14</p>
+      <p><strong>height:</strong>15.9</p>
+      <p><strong>gender:</strong>mare</p>
+      <p><strong>color:</strong>Red Dun</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer light-bg">
+    <div class="container">
+      <p>&copy; 2025 Silver Hoof Stable. All rights reserved.</p>
     </div>
   </footer>
-  </body>
-  </html>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const toggle = document.getElementById('mobile-menu');
+    const nav = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+
+
+</body>
+</html>

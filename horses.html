@@ -24,6 +24,9 @@
           <li><a href="video.html">Videos</a></li>
           <li><a href="book.html">Book</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li>
+              <button id="toggle-theme" class="toggle-theme" title="Toggle dark mode">🌙</button>
+          </li>
         </ul>
       </nav>
     </div>
@@ -41,25 +44,56 @@
   <section class="horse-profiles">
     <div class="container">
       <div class="horse-grid">
+
         
         <div class="horse-card">
-          <img src="b1.jpg" alt="Shadow Dancer the horse">
-          <h3>Shadow Dancer</h3>
+          <img src="n01(1).jpg" alt="Shadow Dancer the horse">
+          <h3>N01 Shadow Dancer</h3>
           <a href="horse 1.html" class="horse-button">Horse Details</a>
         </div>
 
         <div class="horse-card">
-          <img src="b7.jpg" alt="Rusty the horse">
-          <h3>Rusty</h3>
+          <img src="n02(1).jpg" alt="Rusty the horse">
+          <h3>N02 Rusty</h3>
           <a href="horse 2.html" class="horse-button">Horse Details</a>
         </div>
 
         <div class="horse-card">
-          <img src="b5.jpg" alt="Luna the horse">
-          <h3>Luna</h3>
+          <img src="n03(1).jpg" alt="Luna the horse">
+          <h3>N03 Luna</h3>
           <a href="horse 3.html" class="horse-button">Horse Details</a>
         </div>
-
+         <div class="horse-card">
+          <img src="n04(1).jpg" alt="Luna the horse">
+          <h3>N04 janne</h3>
+          <a href="horse 4.html" class="horse-button">Horse Details</a>
+        </div>
+         <div class="horse-card">
+          <img src="n05(1).jpg" alt="Luna the horse">
+          <h3>N05 gabs</h3>
+          <a href="horse 5.html" class="horse-button">Horse Details</a>
+        </div>
+         <div class="horse-card">
+          <img src="n06(1).jpg" alt="Luna the horse">
+          <h3>N06 </h3>
+          <a href="horse 6.html" class="horse-button">Horse Details</a>
+        </div>
+         <div class="horse-card">
+          <img src="n07(1).jpg" alt="Luna the horse">
+          <h3>N07</h3>
+          <a href="horse 7.html" class="horse-button">Horse Details</a>
+        </div>
+         <div class="horse-card">
+          <img src="n08(1).jpg" alt="Luna the horse">
+          <h3>N08 </h3>
+          <a href="horse 8.html" class="horse-button">Horse Details</a>
+        </div>
+         <div class="horse-card">
+          <img src="n09(1).jpg" alt="Luna the horse">
+          <h3>N09 Luna</h3>
+          <a href="horse 9.html" class="horse-button">Horse Details</a>
+        </div>
+         
         <!-- Add more horse cards here -->
 
       </div>
@@ -82,6 +116,25 @@
     toggle.addEventListener('click', () => {
       nav.classList.toggle('show');
     });
+     const toggleBtn = document.getElementById('toggle-theme');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        toggleBtn.textContent = '☀️';
+      } else {
+        localStorage.setItem('theme', 'light');
+        toggleBtn.textContent = '🌙';
+      }
+    });
   </script>
+  <script  src="scriptmenu.js"></script>
 </body>
 </html>

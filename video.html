@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Videos - Silver Hoof Stable</title>
+  <title>Contact Us - Silver Hoof Stable</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
-
   <!-- Navigation -->
   <header class="navbar">
     <div class="container">
@@ -20,109 +20,83 @@
           <li><a href="about.html">About</a></li>
           <li><a href="horses.html">Our Horses</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="breeds.html">Breeds</a></li>
-          <li><a href="video.html" class="active">Videos</a></li>
-          <li><a href="book.html">Book</a></li>
+           <li><a href="pricing.html">pricing</a></li>
+           <li><a href="breeds.html">Breeds</a></li>
+           <li><a href="video.html" class="active">Videos</a></li>
+           <li><a href="book.html">Book</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li>
+              <button id="toggle-theme" class="toggle-theme" title="Toggle dark mode">🌙</button>
+            </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Page Header -->
-  <section class="page-header">
-    <div class="container">
-      <h2>Silver Hoof Stable Videos</h2>
-      <p>Watch our horses, events, and riding sessions.</p>
+  <style>
+   
+    .swiper {
+      width: 90%;
+      max-width: 1000px;
+      height: 500px;
+      margin: 40px auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .swiper-slide video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- Swiper Carousel -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <video src="v1.mp4" controls></video>
+      </div>
+      <div class="swiper-slide">
+        <video src="v2.mp4" controls></video>
+      </div>
+      <div class="swiper-slide">
+        <video src="v3.mp4" controls></video>
+      </div>
+      <div class="swiper-slide">
+        <video src="v4.mp4" controls></video>
+      </div>
     </div>
-  </section>
-
-  <!-- Videos Section -->
-  <section class="videos-section">
-    <div class="container videos-container">
-
-      <!-- Thumbnails for Lightbox -->
-      <div class="video-wrapper">
-        <img src="v1.mp4" alt="Morning Ride" class="video-thumb" data-video="v1.mp4">
-        <h3>Morning Ride</h3>
-      </div>
-
-      <div class="video-wrapper">
-        <img src="v2.mp4" alt="Stable Tour" class="video-thumb" data-video="v1 (2).mp4">
-        <h3>Stable Tour</h3>
-      </div>
-
-      <div class="video-wrapper">
-        <img src="v3.mp4" alt="Riding Lessons" class="video-thumb" data-video="v2.mp4">
-        <h3>Riding Lessons</h3>
-      </div>
-
-      <div class="video-wrapper">
-        <img src="v4.mp4" alt="Trail Ride" class="video-thumb" data-video="v3.mp4">
-        <h3>Trail Ride Adventure</h3>
-      </div>
-
-      <div class="video-wrapper">
-        <img src="" alt="Evening Gallop" class="video-thumb" data-video="v4.mp4">
-        <h3>Evening Gallop</h3>
-      </div>
-
-     
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Silver Hoof Stable. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Lightbox Video Modal -->
-  <div id="video-lightbox" class="lightbox">
-    <div class="lightbox-content">
-      <span class="lightbox-close">&times;</span>
-      <video id="lightbox-video" controls autoplay></video>
-    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
   </div>
 
+  <footer>
+    <p>&copy; 2025 silver hoof Stable. All rights reserved.</p>
+  </footer>
+
   <!-- Scripts -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    // Hamburger menu toggle
-    const menuToggle = document.getElementById('mobile-menu');
-    const navLinks = document.getElementById('nav-links');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-
-    // Lightbox logic
-    const thumbs = document.querySelectorAll('.video-thumb');
-    const lightbox = document.getElementById('video-lightbox');
-    const lightboxVideo = document.getElementById('lightbox-video');
-    const closeBtn = document.querySelector('.lightbox-close');
-
-    thumbs.forEach(thumb => {
-      thumb.addEventListener('click', () => {
-        const videoSrc = thumb.getAttribute('data-video');
-        lightboxVideo.src = videoSrc;
-        lightbox.style.display = 'flex';
-      });
-    });
-
-    closeBtn.addEventListener('click', () => {
-      lightbox.style.display = 'none';
-      lightboxVideo.pause();
-      lightboxVideo.src = "";
-    });
-
-    window.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        lightbox.style.display = 'none';
-        lightboxVideo.pause();
-        lightboxVideo.src = "";
-      }
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
   </script>
+  <script src="scriptmenu.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
   <title>Our Services - Silver Hoof Stable</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
   <!-- Navigation -->
@@ -17,13 +18,16 @@
         <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          
           <li><a href="horses.html">Our Horses</a></li>
           <li><a href="services.html" class="active">Services</a></li>
           <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="breeds.html">Breeds</a></li>
           <li><a href="video.html">Videos</a></li>
           <li><a href="book.html">Book</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li>
+              <button id="toggle-theme" class="toggle-theme" title="Toggle dark mode">🌙</button>
+            </li>
         </ul>
       </nav>
     </div>
@@ -45,32 +49,32 @@
         <div class="service-card">
           <h3>Horse Boarding</h3>
           <p>Full-service boarding with personalized care, clean stalls, daily turnout, and nutrition monitoring.</p>
-          <p class="price">$650/month</p>
+          <p class="price">£405 / month</p>
           <a href="book.html" class="btn">Book Now</a>
         </div>
 
         <div class="service-card">
           <h3>Riding Lessons</h3>
           <p>Private and group lessons for beginners to advanced riders. Safe horses and professional instruction.</p>
-          <p class="price">$60/hour (private) · $40/hour (group)</p>
+          <p class="price"> £40.50 / hour</p>
           <a href="book.html" class="btn">Book Now</a>
         </div>
 
         <div class="service-card">
           <h3>Training</h3>
           <p>Professional horse training available in groundwork, flatwork, jumping, and dressage disciplines.</p>
-          <p class="price">Starting at $300/month</p>
+          <p class="price">Starting at £56.70 / session</p>
           <a href="book.html" class="btn">Book Now</a>
         </div>
 
         <div class="service-card">
           <h3>Trail Rides</h3>
           <p>Guided scenic trail rides through beautiful countryside. Perfect for all skill levels.</p>
-          <p class="price">$45 per ride (1 hour)</p>
+          <p class="price">£64.80 / ride (1 hour)</p>
           <a href="book.html" class="btn">Book Now</a>
         </div>
 
-        <div class="service-card">
+        <div class="service-card"> 
           <h3>Therapeutic Riding</h3>
           <p>Certified programs designed for children and adults with disabilities, in a supportive environment.</p>
           <p class="price">Contact for custom pricing</p>
@@ -82,11 +86,40 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer light-bg">
-    <div class="container">
-      <p>&copy; 2025 Silver Hoof Stable. All rights reserved.</p>
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>About Us</h3>
+      <p>Silver Hoof Stable - Excellence in horse care and training.</p>
     </div>
-  </footer>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="breeds.html">Breeds</a></li>
+        <li><a href="horses.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>Email: </p>
+      <p>Phone: +44794394650</p>
+      <p>Address: </p>
+    </div>
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61576538706812" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+       
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Silver Hoof Stable. All rights reserved.</p>
+  </div>
+</footer>
 
   <!-- Scripts -->
   <script>
@@ -95,6 +128,33 @@
 
     menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('show');
+    });
+  </script>
+  <script>
+    // Hamburger menu toggle
+    const toggle = document.getElementById('mobile-menu');
+    const nav = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+     const toggleBtn = document.getElementById('toggle-theme');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        toggleBtn.textContent = '☀️';
+      } else {
+        localStorage.setItem('theme', 'light');
+        toggleBtn.textContent = '🌙';
+      }
     });
   </script>
 </body>

@@ -7,181 +7,198 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-  <!-- Background Video -->
-  <video autoplay muted loop id="bg-video" playsinline>
-    <source src="v4.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
 
-  <!-- Glassy Overlay -->
-  <div class="content-overlay glass">
+<!-- Background Video -->
+<video autoplay muted loop id="bg-video" playsinline>
+  <source src="v4.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
-    <!-- Navigation -->
-    <header class="navbar">
-      <div class="container">
-        <h1 class="logo">Silver Hoof Stable</h1>
-        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
-        <nav>
-          <ul class="nav-links" id="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="horses.html">Our Horses</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="breeds.html">Breeds</a></li>
-            <li><a href="video.html">Videos</a></li>
-            <li><a href="book.html">Book</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li>
-              <button id="toggle-theme" class="toggle-theme" title="Toggle dark mode">🌙</button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<!-- Glassy Overlay -->
+<div class="content-overlay glass">
 
-    <!-- Welcome Section --> 
-    <main class="homepage-content">
-      <div class="container center-text">
-        <h2 class="main-title">Welcome to Silver Hoof Stable</h2>
-        <p class="subtitle">Elegant horses. Expert care. Timeless tradition.</p>
-        <a href="book.html" class="btn-primary">Book a Visit</a>
-      </div>
-    </main>
-  </div>
-
-  <!-- Sections -->
-  <section class="highlight-section light-bg">
+  <!-- Navigation -->
+  <header class="navbar">
     <div class="container">
-      <h2>Ride with Passion</h2>
-      <p>Where tradition meets elegance. Join us on the journey.</p>
-      <a href="horses.html" class="btn">Explore Our Horses</a>
-    </div>
-  </section>
-
-  <section class="about-teaser">
-    <div class="container">
-      <h2>Our Story</h2>
-      <p>Silver Hoof Stable is a sanctuary for horses and riders alike. We’re building a legacy of excellence in riding, training, and equine companionship.</p>
-      <a href="about.html" class="btn">Learn More</a>
-    </div>
-  </section>
-
-  <section class="services-teaser light-bg">
-    <div class="container">
-      <h2>Our Services</h2>
-      <ul class="service-list">
-        <li>Boarding</li>
-        <li>Training</li>
-        <li>Riding Lessons</li>
-        <li>Trail Rides</li>
-      </ul>
-      <a href="services.html" class="btn">View All Services</a>
-    </div>
-  </section>
-
-  <!-- 📸 Swiper Slider Section -->
-  <section class="photo-swiper-section">
-    <div class="container">
-      <h2>Our Horses in Action</h2>
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="photo_2025-03-29_17-25-15.jpg" alt="Horse 1"></div>
-          <div class="swiper-slide"><img src="h12.jpg" alt="Horse 2"></div>
-          <div class="swiper-slide"><img src="h5.jpg" alt="Horse 3"></div>
-          <div class="swiper-slide"><img src="h7.jpg" alt="Horse 4"></div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-about">
-        <h3>About Us</h3>
-        <p>Silver Hoof Stable - Excellence in horse care and training.</p>
-      </div>
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="breeds.html">Breeds</a></li>
-          <li><a href="horses.html">Gallery</a></li>
+      <h1 class="logo">Silver Hoof Stable</h1>
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        
+          <li><a href="horses.html">Our Horses</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="video.html">Videos</a></li>
+          <li><a href="book.html">Book</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li>
+            <button id="toggle-theme" class="toggle-theme" title="Toggle dark mode">🌙</button>
+          </li>
         </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Welcome Section -->
+  <main class="homepage-content">
+    <div class="container center-text">
+      <h2 class="main-title">Welcome to Silver Hoof Stable</h2>
+      <p class="subtitle">Elegant horses. Expert care. Timeless tradition.</p>
+      <a href="book.html" class="btn-primary">Book a Visit</a>
+    </div>
+  </main>
+</div>
+
+<!-- Highlights -->
+<section class="highlight-section light-bg">
+  <div class="container">
+    <h2>Ride with Passion</h2>
+    <p>Where tradition meets elegance. Join us on the journey.</p>
+    <a href="horses.html" class="btn">Explore Our Horses</a>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about-teaser">
+  <div class="container">
+    <h2>Our Story</h2>
+    <p>Silver Hoof Stable is a sanctuary for horses and riders alike. We’re building a legacy of excellence in riding, training, and equine companionship.</p>
+    <a href="about.html" class="btn">Learn More</a>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services-teaser light-bg">
+  <div class="container">
+    <h2>Our Services</h2>
+    <ul class="service-list">
+      <li>Boarding</li>
+      <li>Training</li>
+      <li>Riding Lessons</li>
+      <li>Trail Rides</li>
+    </ul>
+    <a href="services.html" class="btn">View All Services</a>
+  </div>
+</section>
+
+<!-- Swiper Section -->
+<section class="photo-swiper-section">
+  <div class="container">
+    <h2>Our Horses in Action</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="photo_2025-03-29_17-25-15.jpg" alt="Horse 1"></div>
+        <div class="swiper-slide"><img src="h12.jpg" alt="Horse 2"></div>
+        <div class="swiper-slide"><img src="h5.jpg" alt="Horse 3"></div>
+        <div class="swiper-slide"><img src="h7.jpg" alt="Horse 4"></div>
       </div>
-      <div class="footer-contact">
-        <h3>Contact</h3>
-        <p>Email: </p>
-        <p>Phone:+44794394650 </p>
-        <p>Address: </p>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials light-bg">
+  <div class="container">
+    <h2>What Our Riders Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"The horses are well-trained, and the team is incredibly welcoming!"</p>
+        <span>– Emily R.</span>
       </div>
-      <div class="footer-social">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#" aria-label="Facebook" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Twitter" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" aria-label="Instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="LinkedIn" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-        </div>
+      <div class="testimonial-card">
+        <p>"A peaceful and professional atmosphere for both new and seasoned riders."</p>
+        <span>– Mark D.</span>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Silver Hoof Stable. All rights reserved.</p>
+  </div>
+</section>
+
+<!-- Trust Badges -->
+<section class="trust-badges">
+  <div class="container">
+    <h2>You're in Good Hands</h2>
+    <div class="badge-grid">
+      <div class="badge"><i class="fas fa-award"></i><p>Certified Trainers</p></div>
+      <div class="badge"><i class="fas fa-shield-alt"></i><p>Safe Environment</p></div>
+      <div class="badge"><i class="fas fa-star"></i><p>5-Star Reviews</p></div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- JS Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const toggleBtn = document.getElementById('toggle-theme');
-    const body = document.body;
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>About Us</h3>
+      <p>Silver Hoof Stable - Excellence in horse care and training.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="breeds.html">Breeds</a></li>
+        <li><a href="horses.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>Email:</p>
+      <p>Phone: +44794394650</p>
+      <p>Address:</p>
+    </div>
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61576538706812" aria-label="Facebook" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="" aria-label="Instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+       
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Silver Hoof Stable. All rights reserved.</p>
+  </div>
+</footer>
 
-    if (localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark-mode');
-      toggleBtn.textContent = '☀️';
-    }
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const toggleBtn = document.getElementById('toggle-theme');
+  const body = document.body;
 
-    toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-        toggleBtn.textContent = '☀️';
-      } else {
-        localStorage.setItem('theme', 'light');
-        toggleBtn.textContent = '🌙';
-      }
-    });
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️';
+  }
 
-    const menuToggle = document.getElementById('mobile-menu');
-    const navLinks = document.getElementById('nav-links');
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+    toggleBtn.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  });
 
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
+  const menuToggle = document.getElementById('mobile-menu');
+  const navLinks = document.getElementById('nav-links');
 
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      slidesPerView: 1,
-      spaceBetween: 20,
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  </script>
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: { delay: 3000, disableOnInteraction: false },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } },
+    pagination: { el: '.swiper-pagination', clickable: true },
+  });
+</script>
 </body>
 </html>
